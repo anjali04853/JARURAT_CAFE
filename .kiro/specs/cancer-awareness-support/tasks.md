@@ -125,7 +125,7 @@ This implementation plan breaks down the Cancer Awareness & Support web page int
   - _Requirements: 5.1, 5.2, 5.3, 5.4, 5.5_
 
 
-- [-] 15. Deploy to GitHub Pages / Netlify / Vercel
+- [x] 15. Deploy to GitHub Pages / Netlify / Vercel
   - Push code to GitHub repository
   - Configure deployment settings
   - Deploy application
