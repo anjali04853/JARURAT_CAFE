@@ -1,9 +1,10 @@
-# Netlify Configuration
+# Netlify Configuration for Cancer Awareness & Support
 
 [build]
   # No build command needed for static site
   command = ""
   publish = "."
+  base = "."
 
 [context.production]
   command = ""
@@ -17,10 +18,16 @@
   command = ""
   publish = "."
 
-# Redirect rules
+# Redirect rules - serve index.html for SPA routing
 [[redirects]]
   from = "/*"
   to = "/assingment/index.html"
+  status = 200
+
+# Direct file access
+[[redirects]]
+  from = "/assingment/*"
+  to = "/assingment/:splat"
   status = 200
 
 # Headers for security and performance
