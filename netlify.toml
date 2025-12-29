@@ -1,0 +1,52 @@
+# Netlify Configuration
+
+[build]
+  # No build command needed for static site
+  command = ""
+  publish = "."
+
+[context.production]
+  command = ""
+  publish = "."
+
+[context.deploy-preview]
+  command = ""
+  publish = "."
+
+[context.branch-deploy]
+  command = ""
+  publish = "."
+
+# Redirect rules
+[[redirects]]
+  from = "/*"
+  to = "/assingment/index.html"
+  status = 200
+
+# Headers for security and performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# Cache headers for static assets
+[[headers]]
+  for = "/assingment/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+    Content-Type = "text/css; charset=utf-8"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+    Content-Type = "application/javascript; charset=utf-8"

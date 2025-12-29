@@ -1,0 +1,30 @@
+{
+  "name": "cancer-awareness-support",
+  "version": "1.0.0",
+  "description": "A responsive web application dedicated to cancer awareness, support, and inspiration",
+  "main": "script.js",
+  "scripts": {
+    "test": "node test-runner.js",
+    "serve": "npx http-server",
+    "serve:python": "python -m http.server 8000"
+  },
+  "keywords": [
+    "cancer",
+    "awareness",
+    "support",
+    "health",
+    "inspiration",
+    "responsive",
+    "accessible"
+  ],
+  "author": "Cancer Awareness Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/cancer-awareness-support.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/cancer-awareness-support/issues"
+  },
+  "homepage": "https://github.com/yourusername/cancer-awareness-support#readme"
+}
