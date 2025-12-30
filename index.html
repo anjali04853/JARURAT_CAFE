@@ -3,56 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cancer Awareness & Support</title>
+    <title>Cancer Awareness & Support - JARURAT CAFE</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Cancer Awareness & Support</h1>
-            <p>Your companion in the journey towards awareness and hope</p>
-        </header>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🎗️</span>
+                <span class="logo-text">JARURAT CAFE</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#inspiration" class="nav-link">Inspiration</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-        <main>
-            <section class="hero">
-                <h2>Welcome</h2>
-                <p>This platform is dedicated to providing support, resources, and inspiration for those affected by cancer.</p>
-            </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Cancer Awareness & Support</h1>
+            <p class="hero-subtitle">Your companion in the journey towards awareness, hope, and healing</p>
+            <button class="cta-button" onclick="document.getElementById('inspiration').scrollIntoView({behavior: 'smooth'})">
+                Get Inspired
+            </button>
+        </div>
+        <div class="hero-background"></div>
+    </section>
 
-            <section class="quote-section">
-                <h2>Daily Inspiration</h2>
-                <div id="quote-container" class="quote-container">
-                    <p id="quote" class="quote">Loading inspiration...</p>
-                    <p id="author" class="author">— Author</p>
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon">💪</div>
+                    <h3>Support</h3>
+                    <p>Providing emotional and informational support to those affected by cancer</p>
                 </div>
-                <button id="new-quote-btn" class="btn">Get New Quote</button>
-            </section>
+                <div class="about-card">
+                    <div class="card-icon">📚</div>
+                    <h3>Education</h3>
+                    <p>Sharing knowledge about cancer awareness and prevention strategies</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">🤝</div>
+                    <h3>Community</h3>
+                    <p>Building a compassionate community for survivors and supporters</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <section class="contact-section">
-                <h2>Get in Touch</h2>
+    <!-- Daily Inspiration Section -->
+    <section id="inspiration" class="inspiration">
+        <div class="container">
+            <h2 class="section-title">Daily Inspiration</h2>
+            <div class="quote-card">
+                <div class="quote-icon">✨</div>
+                <p id="quote" class="quote-text">Loading inspiration...</p>
+                <p id="author" class="quote-author">— Author</p>
+                <button id="new-quote-btn" class="quote-button">Get New Quote</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-wrapper">
                 <form id="contact-form" class="contact-form">
                     <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required aria-label="Your name">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your name">
                     </div>
                     <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required aria-label="Your email">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
                     </div>
                     <div class="form-group">
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="5" required aria-label="Your message"></textarea>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Share your thoughts or questions..."></textarea>
                     </div>
-                    <button type="submit" class="btn">Send Message</button>
+                    <button type="submit" class="submit-button">Send Message</button>
                 </form>
                 <div id="form-message" class="form-message" role="alert"></div>
-            </section>
-        </main>
+            </div>
+        </div>
+    </section>
 
-        <footer>
-            <p>&copy; 2024 Cancer Awareness & Support. All rights reserved.</p>
-        </footer>
-    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Cancer Awareness & Support - JARURAT CAFE. All rights reserved.</p>
+            <p>Dedicated to awareness, support, and hope.</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
