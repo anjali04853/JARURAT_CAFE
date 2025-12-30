@@ -1,15 +1,15 @@
 /* ============================================
-   Cancer Awareness & Support - Beautiful UI
-   Modern, Responsive Design
+   Cancer Awareness & Support - Premium UI
+   Awareness Theme with Powerful Visuals
    ============================================ */
 
 /* CSS Variables */
 :root {
-    --primary-color: #e74c3c;
-    --secondary-color: #3498db;
-    --accent-color: #f39c12;
-    --dark-bg: #2c3e50;
-    --light-bg: #ecf0f1;
+    --primary-red: #e74c3c;
+    --dark-red: #c0392b;
+    --accent-gold: #f39c12;
+    --dark-bg: #1a1a2e;
+    --light-bg: #f8f9fa;
     --text-dark: #2c3e50;
     --text-light: #7f8c8d;
     --white: #ffffff;
@@ -52,12 +52,12 @@ body {
    ============================================ */
 
 .navbar {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
     padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-lg);
 }
 
 .nav-container {
@@ -80,10 +80,16 @@ body {
 
 .logo-icon {
     font-size: 2rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
 }
 
 .logo-text {
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 .nav-menu {
@@ -95,7 +101,7 @@ body {
 .nav-link {
     color: var(--white);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     transition: var(--transition);
     position: relative;
 }
@@ -110,8 +116,8 @@ body {
     bottom: -5px;
     left: 0;
     width: 0;
-    height: 2px;
-    background-color: var(--accent-color);
+    height: 3px;
+    background-color: var(--accent-gold);
     transition: var(--transition);
 }
 
@@ -133,14 +139,14 @@ body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-.hero-background {
+.hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="1200" height="600" fill="url(%23grid)"/></svg>');
-    opacity: 0.5;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="dots" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="2" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="1200" height="600" fill="url(%23dots)"/></svg>');
+    opacity: 0.3;
 }
 
 .hero-content {
@@ -152,118 +158,237 @@ body {
 }
 
 .hero-title {
-    font-size: 3.5rem;
-    font-weight: 700;
+    font-size: 4rem;
+    font-weight: 800;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 2rem;
     opacity: 0.95;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--accent-gold);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-top: 0.5rem;
 }
 
 .cta-button {
-    background-color: var(--accent-color);
+    background-color: var(--accent-gold);
     color: var(--white);
     border: none;
-    padding: 15px 40px;
-    font-size: 1.1rem;
+    padding: 18px 50px;
+    font-size: 1.2rem;
     border-radius: 50px;
     cursor: pointer;
     transition: var(--transition);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    font-weight: 600;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
     background-color: #e67e22;
 }
 
 /* ============================================
-   4. ABOUT SECTION
+   4. AWARENESS SECTION
    ============================================ */
 
-.about {
-    padding: 80px 0;
-    background-color: var(--light-bg);
+.awareness {
+    padding: 100px 0;
+    background: linear-gradient(180deg, var(--light-bg) 0%, var(--white) 100%);
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     color: var(--text-dark);
     position: relative;
-    padding-bottom: 1rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 3rem;
+    font-weight: 500;
 }
 
 .section-title::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
-    width: 100px;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-    border-radius: 2px;
+    width: 120px;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-red), var(--accent-gold));
+    border-radius: 3px;
 }
 
-.about-grid {
+.awareness-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.awareness-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    border-left: 5px solid var(--primary-red);
+}
+
+.awareness-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-red), var(--accent-gold));
+}
+
+.awareness-card:hover {
+    transform: translateY(-15px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--accent-gold);
+    opacity: 0.2;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.awareness-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-red);
+    font-weight: 700;
+}
+
+.awareness-card p {
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+}
+
+/* ============================================
+   5. SUPPORT SECTION
+   ============================================ */
+
+.support {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.support-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    margin-top: 3rem;
 }
 
-.about-card {
+.support-card {
     background: var(--white);
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 15px;
     text-align: center;
     box-shadow: var(--shadow);
     transition: var(--transition);
 }
 
-.about-card:hover {
+.support-card:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow-lg);
+    border-top: 4px solid var(--primary-red);
 }
 
-.card-icon {
-    font-size: 3rem;
+.support-icon {
+    font-size: 3.5rem;
     margin-bottom: 1rem;
+    display: block;
 }
 
-.about-card h3 {
-    font-size: 1.5rem;
+.support-card h3 {
+    font-size: 1.4rem;
     margin-bottom: 1rem;
-    color: var(--primary-color);
+    color: var(--text-dark);
+    font-weight: 700;
 }
 
-.about-card p {
+.support-card p {
     color: var(--text-light);
     line-height: 1.8;
 }
 
 /* ============================================
-   5. INSPIRATION SECTION
+   6. INSPIRATION SECTION
    ============================================ */
 
 .inspiration {
-    padding: 80px 0;
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
     color: var(--white);
 }
 
 .inspiration .section-title {
     color: var(--white);
+}
+
+.inspiration .section-subtitle {
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .inspiration .section-title::after {
@@ -273,89 +398,92 @@ body {
 .quote-card {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 3rem;
-    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 3.5rem;
+    border-radius: 20px;
     text-align: center;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .quote-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
     display: block;
 }
 
 .quote-text {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-style: italic;
-    margin-bottom: 1rem;
-    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    line-height: 1.9;
+    font-weight: 300;
 }
 
 .quote-author {
     font-size: 1.1rem;
     opacity: 0.9;
     margin-bottom: 2rem;
+    font-weight: 500;
 }
 
 .quote-button {
-    background-color: var(--accent-color);
+    background-color: var(--accent-gold);
     color: var(--white);
     border: none;
-    padding: 12px 30px;
+    padding: 14px 35px;
     font-size: 1rem;
     border-radius: 50px;
     cursor: pointer;
     transition: var(--transition);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .quote-button:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
     background-color: #e67e22;
 }
 
 /* ============================================
-   6. CONTACT SECTION
+   7. CONTACT SECTION
    ============================================ */
 
 .contact {
-    padding: 80px 0;
-    background-color: var(--white);
+    padding: 100px 0;
+    background: var(--light-bg);
 }
 
 .contact-wrapper {
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
 .contact-form {
-    background: var(--light-bg);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow-lg);
 }
 
 .form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
+    margin-bottom: 0.7rem;
+    font-weight: 700;
     color: var(--text-dark);
+    font-size: 1.05rem;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 12px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
+    padding: 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
     font-family: inherit;
     font-size: 1rem;
     transition: var(--transition);
@@ -364,32 +492,33 @@ body {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+    border-color: var(--primary-red);
+    box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.1);
 }
 
 .submit-button {
     width: 100%;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
     color: var(--white);
     border: none;
-    padding: 15px;
+    padding: 16px;
     font-size: 1.1rem;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     transition: var(--transition);
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .submit-button:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
     box-shadow: var(--shadow-lg);
 }
 
 .form-message {
-    margin-top: 1rem;
-    padding: 1rem;
-    border-radius: 5px;
+    margin-top: 1.5rem;
+    padding: 1.2rem;
+    border-radius: 8px;
     text-align: center;
     font-weight: 600;
     display: none;
@@ -408,29 +537,73 @@ body {
 }
 
 /* ============================================
-   7. FOOTER
+   8. FOOTER
    ============================================ */
 
 .footer {
-    background: linear-gradient(135deg, var(--dark-bg) 0%, #34495e 100%);
+    background: linear-gradient(135deg, var(--dark-bg) 0%, #0f0f1e 100%);
     color: var(--white);
-    padding: 2rem 0;
+    padding: 4rem 0 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--accent-gold);
+    font-weight: 700;
+}
+
+.footer-section p {
+    opacity: 0.8;
+    line-height: 1.8;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.7rem;
+}
+
+.footer-section ul li a {
+    color: var(--white);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+.footer-section ul li a:hover {
+    opacity: 1;
+    color: var(--accent-gold);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
     text-align: center;
 }
 
-.footer p {
+.footer-bottom p {
+    opacity: 0.7;
     margin: 0.5rem 0;
-    opacity: 0.9;
 }
 
 /* ============================================
-   8. ANIMATIONS
+   9. ANIMATIONS
    ============================================ */
 
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(40px);
     }
     to {
         opacity: 1;
@@ -439,7 +612,7 @@ body {
 }
 
 /* ============================================
-   9. RESPONSIVE DESIGN
+   10. RESPONSIVE DESIGN
    ============================================ */
 
 @media (max-width: 768px) {
@@ -448,50 +621,74 @@ body {
     }
 
     .hero-subtitle {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+    }
+
+    .hero-stats {
+        gap: 1.5rem;
     }
 
     .nav-menu {
         gap: 1rem;
+        font-size: 0.9rem;
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     .quote-text {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
-    .about-grid {
+    .awareness-grid,
+    .support-grid {
         grid-template-columns: 1fr;
     }
 
     .quote-card {
         padding: 2rem;
     }
+
+    .contact-form {
+        padding: 2rem;
+    }
 }
 
 @media (max-width: 480px) {
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .hero-subtitle {
         font-size: 1rem;
     }
 
+    .hero-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .stat {
+        padding: 1rem;
+    }
+
     .nav-menu {
         gap: 0.5rem;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     .section-title {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     .cta-button {
         padding: 12px 30px;
         font-size: 1rem;
+    }
+
+    .awareness-card,
+    .support-card {
+        padding: 1.5rem;
     }
 }

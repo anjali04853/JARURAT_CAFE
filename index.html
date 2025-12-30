@@ -16,7 +16,8 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#inspiration" class="nav-link">Inspiration</a></li>
+                <li><a href="#awareness" class="nav-link">Awareness</a></li>
+                <li><a href="#support" class="nav-link">Support</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
@@ -24,44 +25,112 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="hero-title">Cancer Awareness & Support</h1>
-            <p class="hero-subtitle">Your companion in the journey towards awareness, hope, and healing</p>
-            <button class="cta-button" onclick="document.getElementById('inspiration').scrollIntoView({behavior: 'smooth'})">
-                Get Inspired
+            <h1 class="hero-title">Together We Fight Cancer</h1>
+            <p class="hero-subtitle">Awareness • Support • Hope • Healing</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">1 in 2</span>
+                    <span class="stat-label">Will face cancer</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">50%+</span>
+                    <span class="stat-label">Survival rate</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Hope & Support</span>
+                </div>
+            </div>
+            <button class="cta-button" onclick="document.getElementById('awareness').scrollIntoView({behavior: 'smooth'})">
+                Learn More
             </button>
         </div>
-        <div class="hero-background"></div>
     </section>
 
-    <!-- About Section -->
-    <section class="about">
+    <!-- Awareness Section -->
+    <section id="awareness" class="awareness">
         <div class="container">
-            <h2 class="section-title">About Us</h2>
-            <div class="about-grid">
-                <div class="about-card">
+            <h2 class="section-title">Cancer Awareness</h2>
+            <p class="section-subtitle">Knowledge is power. Early detection saves lives.</p>
+            
+            <div class="awareness-grid">
+                <div class="awareness-card">
+                    <div class="card-number">01</div>
+                    <h3>Know the Signs</h3>
+                    <p>Persistent cough, unusual bleeding, changes in skin, lumps, or digestive changes. Early detection is crucial.</p>
+                    <div class="card-icon">🔍</div>
+                </div>
+                <div class="awareness-card">
+                    <div class="card-number">02</div>
+                    <h3>Risk Factors</h3>
+                    <p>Smoking, alcohol, UV exposure, family history, and lifestyle choices. Understanding risks helps prevention.</p>
+                    <div class="card-icon">⚠️</div>
+                </div>
+                <div class="awareness-card">
+                    <div class="card-number">03</div>
+                    <h3>Prevention Tips</h3>
+                    <p>Healthy diet, regular exercise, avoid tobacco, limit alcohol, and regular screenings. Prevention matters.</p>
                     <div class="card-icon">💪</div>
-                    <h3>Support</h3>
-                    <p>Providing emotional and informational support to those affected by cancer</p>
                 </div>
-                <div class="about-card">
-                    <div class="card-icon">📚</div>
-                    <h3>Education</h3>
-                    <p>Sharing knowledge about cancer awareness and prevention strategies</p>
-                </div>
-                <div class="about-card">
-                    <div class="card-icon">🤝</div>
-                    <h3>Community</h3>
-                    <p>Building a compassionate community for survivors and supporters</p>
+                <div class="awareness-card">
+                    <div class="card-number">04</div>
+                    <h3>Regular Screening</h3>
+                    <p>Age-appropriate screenings can detect cancer early. Talk to your doctor about what's right for you.</p>
+                    <div class="card-icon">🏥</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Daily Inspiration Section -->
-    <section id="inspiration" class="inspiration">
+    <!-- Support Section -->
+    <section id="support" class="support">
+        <div class="container">
+            <h2 class="section-title">We Are Here For You</h2>
+            <p class="section-subtitle">Support comes in many forms. You are not alone.</p>
+            
+            <div class="support-grid">
+                <div class="support-card">
+                    <div class="support-icon">❤️</div>
+                    <h3>Emotional Support</h3>
+                    <p>Connect with others who understand your journey. Share experiences and find comfort in community.</p>
+                </div>
+                <div class="support-card">
+                    <div class="support-icon">📚</div>
+                    <h3>Resources & Info</h3>
+                    <p>Access reliable information about treatments, side effects, and coping strategies from trusted sources.</p>
+                </div>
+                <div class="support-card">
+                    <div class="support-icon">🤝</div>
+                    <h3>Community</h3>
+                    <p>Join support groups, forums, and events. Connect with survivors, caregivers, and advocates.</p>
+                </div>
+                <div class="support-card">
+                    <div class="support-icon">🌟</div>
+                    <h3>Hope & Inspiration</h3>
+                    <p>Read survivor stories, get daily inspiration, and celebrate victories. Hope is powerful medicine.</p>
+                </div>
+                <div class="support-card">
+                    <div class="support-icon">👨‍⚕️</div>
+                    <h3>Medical Guidance</h3>
+                    <p>Find specialists, get second opinions, and understand treatment options. Your health matters.</p>
+                </div>
+                <div class="support-card">
+                    <div class="support-icon">🎯</div>
+                    <h3>Wellness Programs</h3>
+                    <p>Yoga, meditation, nutrition counseling, and fitness programs designed for cancer patients and survivors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inspiration Section -->
+    <section class="inspiration">
         <div class="container">
             <h2 class="section-title">Daily Inspiration</h2>
+            <p class="section-subtitle">Strength comes from within. You are stronger than you think.</p>
+            
             <div class="quote-card">
                 <div class="quote-icon">✨</div>
                 <p id="quote" class="quote-text">Loading inspiration...</p>
@@ -74,7 +143,9 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
+            <h2 class="section-title">Reach Out To Us</h2>
+            <p class="section-subtitle">Have questions? Want to share your story? We're here to listen.</p>
+            
             <div class="contact-wrapper">
                 <form id="contact-form" class="contact-form">
                     <div class="form-group">
@@ -86,8 +157,8 @@
                         <input type="email" id="email" name="email" required placeholder="Enter your email">
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="6" required placeholder="Share your thoughts or questions..."></textarea>
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Share your thoughts, questions, or story..."></textarea>
                     </div>
                     <button type="submit" class="submit-button">Send Message</button>
                 </form>
@@ -99,8 +170,32 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Cancer Awareness & Support - JARURAT CAFE. All rights reserved.</p>
-            <p>Dedicated to awareness, support, and hope.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>JARURAT CAFE</h4>
+                    <p>Dedicated to cancer awareness, support, and hope.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#awareness">Awareness</a></li>
+                        <li><a href="#support">Support</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Cancer Info</a></li>
+                        <li><a href="#">Support Groups</a></li>
+                        <li><a href="#">Survivor Stories</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cancer Awareness & Support - JARURAT CAFE. All rights reserved.</p>
+                <p>Together, we make a difference. 🎗️</p>
+            </div>
         </div>
     </footer>
 

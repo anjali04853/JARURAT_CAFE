@@ -1,11 +1,16 @@
 // ============================================
 // Cancer Awareness & Support - JavaScript
+// Premium Interactive Experience
 // ============================================
 
-// Fallback quotes for offline scenarios
+// Awareness-focused fallback quotes
 const fallbackQuotes = [
     {
-        text: "The only way out is through.",
+        text: "Cancer is a word, not a sentence. You are stronger than you know.",
+        author: "Unknown"
+    },
+    {
+        text: "The only way out is through. And we'll walk it together.",
         author: "Robert Frost"
     },
     {
@@ -17,11 +22,11 @@ const fallbackQuotes = [
         author: "A.A. Milne"
     },
     {
-        text: "Hope is the thing with feathers that perches in the soul.",
+        text: "Hope is the thing with feathers that perches in the soul and sings the tune without the words.",
         author: "Emily Dickinson"
     },
     {
-        text: "Every moment is a fresh beginning.",
+        text: "Every moment is a fresh beginning. Every day is a new opportunity.",
         author: "T.S. Eliot"
     },
     {
@@ -33,8 +38,20 @@ const fallbackQuotes = [
         author: "Ralph Waldo Emerson"
     },
     {
-        text: "You are not alone in this journey. We are here for you.",
+        text: "You are not alone in this journey. Millions have walked this path and found hope.",
         author: "JARURAT CAFE"
+    },
+    {
+        text: "Awareness saves lives. Early detection changes outcomes. You matter.",
+        author: "Cancer Awareness Movement"
+    },
+    {
+        text: "Your story is not over. Your best chapters are still being written.",
+        author: "Unknown"
+    },
+    {
+        text: "In the middle of difficulty lies opportunity. In the middle of cancer lies hope.",
+        author: "Adapted from Einstein"
     }
 ];
 
@@ -53,7 +70,7 @@ async function fetchQuote() {
         const data = await response.json();
         displayQuote(data.content, data.author);
     } catch (error) {
-        console.log('Using fallback quote');
+        console.log('Using awareness-focused fallback quote');
         getRandomFallbackQuote();
     }
 }
@@ -93,6 +110,9 @@ document.addEventListener('DOMContentLoaded', () => {
     authorElement.style.transition = 'opacity 0.3s ease';
     
     fetchQuote();
+    
+    // Add scroll animations
+    observeElements();
 });
 
 // New quote button
@@ -130,7 +150,7 @@ function handleFormSubmit(e) {
     
     setTimeout(() => {
         // Success message
-        showMessage('Thank you for reaching out! We will get back to you soon.', 'success');
+        showMessage('Thank you for reaching out! We will get back to you soon. Your voice matters. 🎗️', 'success');
         
         // Reset form
         contactForm.reset();
@@ -169,6 +189,32 @@ function showMessage(text, type) {
     formMessage.textContent = text;
     formMessage.className = `form-message ${type}`;
     formMessage.style.display = 'block';
+}
+
+// ============================================
+// SCROLL ANIMATIONS
+// ============================================
+
+function observeElements() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe cards
+    document.querySelectorAll('.awareness-card, .support-card').forEach(card => {
+        card.style.opacity = '0';
+        observer.observe(card);
+    });
 }
 
 // ============================================
@@ -219,4 +265,10 @@ if ('IntersectionObserver' in window) {
     document.querySelectorAll('img[data-src]').forEach(img => imageObserver.observe(img));
 }
 
-console.log('Cancer Awareness & Support - Website Loaded Successfully');
+// ============================================
+// AWARENESS TRACKING
+// ============================================
+
+console.log('%c🎗️ Cancer Awareness & Support Platform', 'color: #e74c3c; font-size: 20px; font-weight: bold;');
+console.log('%cTogether we fight cancer. Early detection saves lives. You are not alone.', 'color: #f39c12; font-size: 14px;');
+console.log('%cFor more information, visit trusted cancer organizations and support groups.', 'color: #3498db; font-size: 12px;');
