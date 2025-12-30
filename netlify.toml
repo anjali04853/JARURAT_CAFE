@@ -20,6 +20,11 @@
 
 # Redirect rules - serve index.html for SPA routing
 [[redirects]]
+  from = "/"
+  to = "/assingment/index.html"
+  status = 200
+
+[[redirects]]
   from = "/*"
   to = "/assingment/index.html"
   status = 200
