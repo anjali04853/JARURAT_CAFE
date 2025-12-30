@@ -1,2 +1,6 @@
 # Netlify redirects configuration
-# Serve HTML pages directly - no redirects needed
+# Handle URLs without .html extension
+
+/about              /about.html           200
+/stories            /stories.html         200
+/resources          /resources.html       200
