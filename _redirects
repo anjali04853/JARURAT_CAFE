@@ -1,0 +1,10 @@
+# Netlify redirects configuration
+# Ensure all HTML pages are served correctly
+
+# Single Page App redirects
+/about /about.html 200
+/stories /stories.html 200
+/resources /resources.html 200
+
+# Fallback for SPA routing (if needed)
+/* /index.html 200
